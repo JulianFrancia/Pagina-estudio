@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estudio jurídico Aguet</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="icon"href="Imagenes/logo.ico">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<div class="contenedor">
+	<header>
+	<div class="container-fluid">	
+	<a href="Home.html"><h1 class="fuente-titulo">Estudio jurídico</h1>
+	<br>
+	<h3 class="fuente-titulo">Aguet & Irungaray</h3></a>
+	<div class="container-fluid">
+	<h4 class="subtitulo">Horarios de atención:</h4>
+	<h5 class="subtitulo">Lunes a Viernes de 8hs a 12hs y de 16hs a 19hs</h5>
+	</div>
+	</div>
+	<nav>
+	<div class="container-fluid">
+	<div class="row justify-content-center">	
+	<ul class="nav justify-content-center">
+  <li class="nav-item">
+  <button type="button" class="btn color  fuente-subtitulo"><a class="nav-link" href="Home.html">Inicio</a></button>
+  </li>			
+  <li class="nav-item">
+  <button type="button" class="btn color fuente-subtitulo"><a class="nav-link" href="Nosotros.html">Nosotros</a></button>
+  </li>
+	<li class="nav-item">
+   <button type="button" class="btn color fuente-subtitulo"><a class="nav-link" href="Preguntas-frecuentes.html">Preguntas frecuentes</a></button></li>
+  <li class="nav-item">
+  <button type="button" class="btn color fuente-subtitulo"><a class="nav-link" href="Novedades.html">Novedades</a></button>
+  </li>
+  </li>
+  <li class="nav-item">
+  <button type="button" class="btn color nos fuente-subtitulo"><a class="nav-link" href="Contacto.html">Contacto</a></button>
+  </li>
+</div>
+</ul>
+</div>
+</div>	
+	</nav>
+</header>
+<section>
+<div class="container-fluid mapa">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.56416152733!2d-58.240397585123496!3d-32.4843473559645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95afdbab051d2eb1%3A0xd46c740c296aa2ef!2sChacabuco+94%2C+Concepci%C3%B3n+del+Uruguay%2C+Entre+R%C3%ADos!5e0!3m2!1ses!2sar!4v1560435352359!5m2!1ses!2sar" width="100%" height="450px" frameborder="0%" style="border:0" allowfullscreen></iframe>
+</div>
+</section>
+<section class="footer">
+<div class="container separar">
+<div class="row">
+<div class="col-md-6">  
+<ul class="lista-footer">
+<li><h3 class="fuente-titulo">Estudio jurídico</h3>
+  <h5 class="fuente-titulo">Aguet & Irungaray</h5></li>
+<br>
+<br>
+<li class="fuente-subtitulo agrandar-letra">Chacabuco 94-Concepción del Uruguay</li>
+<li class="fuente-subtitulo agrandar-letra">Estudio:3442-426268</li>
+<li class="fuente-subtitulo agrandar-letra">WhatsApp:3442-508279</li>
+<li class="fuente-subtitulo agrandar-letra">Lunes a Viernes de 8hs a 12hs y de 16hs a 19hs</li> 
+</ul>
+</div>
+<div class="col-md-6">
+<form id="contact-form" class="contact" name="contact-form" method="post"  action="enviar2.php" >
+  <h3>Envíenos su consulta</h3>
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text" name="Nombre" class="form-control"  placeholder="Ingrese su nombre" required>
+  </div>
+    <div class="form-group">
+    <label for="apellido">Apellido</label>
+    <input id="apellido"type="text" name="Apellido" class="form-control"  placeholder="Ingrese su apellido" required>
+  </div>
+  <div class="form-group">
+    <label for="telf">Teléfono</label>
+    <input id="telf" type="number" name="telefono" class="form-control"  placeholder="Ingrese su numero de teléfono" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Consulta</label>
+    <textarea name ="mensaje" placeholder="Ingrese su consulta"class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+  <input id='boton-form' class="btn btn-primary" type="submit" value="Enviar">
+</div>
+</form>
+</div>
+</div>
+</div>  
+</section>
+<section>
+   <script>
+    let btn=document.getElementById('boton-form')
+    let nombresito=document.getElementById('nombre')
+    let telf=document.getElementById('telf')
+
+    btn.addEventListener('click',function(){
+      let tipo1=telf.value
+      let tipo=nombresito.value
+      if(tipo1!='' && tipo!=''){
+        alert('Su consulta fue enviada')
+      }
+    })
+
+
+  </script>
+</section>
+</div>
+</body>
+</html>
